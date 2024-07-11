@@ -1,0 +1,146 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="AndroidDomInspection" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="AndroidLintActivityIconColor" enabled="true" level="WARNING" enabled_by_default="false">
+      <scope name="Project Source Files" level="WARNING" enabled="true" editorAttributes="DEPRECATED_ATTRIBUTES" />
+    </inspection_tool>
+    <inspection_tool class="AndroidLintAllCaps" enabled="true" level="WARNING" enabled_by_default="false">
+      <scope name="Project Source Files" level="WARNING" enabled="true" editorAttributes="DEPRECATED_ATTRIBUTES" />
+    </inspection_tool>
+    <inspection_tool class="AndroidLintAlwaysShowAction" enabled="true" level="WARNING" enabled_by_default="false">
+      <scope name="Project Source Files" level="WARNING" enabled="true" editorAttributes="DEPRECATED_ATTRIBUTES" />
+    </inspection_tool>
+    <inspection_tool class="AndroidLintAppLinkUrlError" enabled="true" level="ERROR" enabled_by_default="false">
+      <scope name="Project Source Files" level="WARNING" enabled="true" editorAttributes="DEPRECATED_ATTRIBUTES" />
+    </inspection_tool>
+    <inspection_tool class="AndroidLintAutofill" enabled="true" level="WARNING" enabled_by_default="false">
+      <scope name="Project Source Files" level="WARNING" enabled="true" editorAttributes="DEPRECATED_ATTRIBUTES" />
+    </inspection_tool>
+    <inspection_tool class="AndroidLintBackButton" enabled="true" level="WARNING" enabled_by_default="false">
+      <scope name="Project Source Files" level="WARNING" enabled="true" editorAttributes="DEPRECATED_ATTRIBUTES" />
+    </inspection_tool>
+    <inspection_tool class="AndroidLintButtonCase" enabled="true" level="WARNING" enabled_by_default="false">
+      <scope name="Project Source Files" level="WARNING" enabled="true" editorAttributes="DEPRECATED_ATTRIBUTES" />
+    </inspection_tool>
+    <inspection_tool class="AndroidLintButtonOrder" enabled="true" level="WARNING" enabled_by_default="false">
+      <scope name="Project Source Files" level="WARNING" enabled="true" editorAttributes="DEPRECATED_ATTRIBUTES" />
+    </inspection_tool>
+    <inspection_tool class="AndroidLintButtonStyle" enabled="true" level="WARNING" enabled_by_default="false">
+      <scope name="Project Source Files" level="WARNING" enabled="true" editorAttributes="DEPRECATED_ATTRIBUTES" />
+    </inspection_tool>
+    <inspection_tool class="AndroidLintConvertToWebp" enabled="true" level="WARNING" enabled_by_default="false">
+      <scope name="Project Source Files" level="WARNING" enabled="true" editorAttributes="DEPRECATED_ATTRIBUTES" />
+    </inspection_tool>
+    <inspection_tool class="AndroidLintGifUsage" enabled="true" level="WARNING" enabled_by_default="false">
+      <scope name="Project Source Files" level="WARNING" enabled="true" editorAttributes="DEPRECATED_ATTRIBUTES" />
+    </inspection_tool>
+    <inspection_tool class="AndroidLintIconColors" enabled="true" level="WARNING" enabled_by_default="false">
+      <scope name="Project Source Files" level="WARNING" enabled="true" editorAttributes="DEPRECATED_ATTRIBUTES" />
+    </inspection_tool>
+    <inspection_tool class="AndroidLintIconDensities" enabled="true" level="WARNING" enabled_by_default="false">
+      <scope name="Project Source Files" level="WARNING" enabled="true" editorAttributes="DEPRECATED_ATTRIBUTES" />
+    </inspection_tool>
+    <inspection_tool class="AndroidLintIconDipSize" enabled="true" level="WARNING" enabled_by_default="false">
+      <scope name="Project Source Files" level="WARNING" enabled="true" editorAttributes="DEPRECATED_ATTRIBUTES" />
+    </inspection_tool>
+    <inspection_tool class="AndroidLintIconDuplicates" enabled="true" level="WARNING" enabled_by_default="false">
+      <scope name="Project Source Files" level="WARNING" enabled="true" editorAttributes="DEPRECATED_ATTRIBUTES" />
+    </inspection_tool>
+    <inspection_tool class="AndroidLintIconDuplicatesConfig" enabled="true" level="WARNING" enabled_by_default="false">
+      <scope name="Project Source Files" level="WARNING" enabled="true" editorAttributes="DEPRECATED_ATTRIBUTES" />
+    </inspection_tool>
+    <inspection_tool class="AndroidLintIconExpectedSize" enabled="true" level="WARNING" enabled_by_default="false">
+      <scope name="Project Source Files" level="WARNING" enabled="true" editorAttributes="DEPRECATED_ATTRIBUTES" />
+    </inspection_tool>
+    <inspection_tool class="AndroidLintIconExtension" enabled="true" level="WARNING" enabled_by_default="false">
+      <scope name="Project Source Files" level="WARNING" enabled="true" editorAttributes="DEPRECATED_ATTRIBUTES" />
+    </inspection_tool>
+    <inspection_tool class="AndroidLintIconLauncherShape" enabled="true" level="WARNING" enabled_by_default="false">
+      <scope name="Project Source Files" level="WARNING" enabled="true" editorAttributes="DEPRECATED_ATTRIBUTES" />
+    </inspection_tool>
+    <inspection_tool class="AndroidLintIconLocation" enabled="true" level="WARNING" enabled_by_default="false">
+      <scope name="Project Source Files" level="WARNING" enabled="true" editorAttributes="DEPRECATED_ATTRIBUTES" />
+    </inspection_tool>
+    <inspection_tool class="AndroidLintIconMissingDensityFolder" enabled="true" level="WARNING" enabled_by_default="false">
+      <scope name="Project Source Files" level="WARNING" enabled="true" editorAttributes="DEPRECATED_ATTRIBUTES" />
+    </inspection_tool>
+    <inspection_tool class="AndroidLintIconMixedNinePatch" enabled="true" level="WARNING" enabled_by_default="false">
+      <scope name="Project Source Files" level="WARNING" enabled="true" editorAttributes="DEPRECATED_ATTRIBUTES" />
+    </inspection_tool>
+    <inspection_tool class="AndroidLintIconNoDpi" enabled="true" level="WARNING" enabled_by_default="false">
+      <scope name="Project Source Files" level="WARNING" enabled="true" editorAttributes="DEPRECATED_ATTRIBUTES" />
+    </inspection_tool>
+    <inspection_tool class="AndroidLintIconXmlAndPng" enabled="true" level="WARNING" enabled_by_default="false">
+      <scope name="Project Source Files" level="WARNING" enabled="true" editorAttributes="DEPRECATED_ATTRIBUTES" />
+    </inspection_tool>
+    <inspection_tool class="AndroidLintMenuTitle" enabled="true" level="ERROR" enabled_by_default="false">
+      <scope name="Project Source Files" level="WARNING" enabled="true" editorAttributes="DEPRECATED_ATTRIBUTES" />
+    </inspection_tool>
+    <inspection_tool class="AndroidLintMipmapIcons" enabled="true" level="WARNING" enabled_by_default="false">
+      <scope name="Project Source Files" level="WARNING" enabled="true" editorAttributes="DEPRECATED_ATTRIBUTES" />
+    </inspection_tool>
+    <inspection_tool class="AndroidLintMissingApplicationIcon" enabled="true" level="WARNING" enabled_by_default="false">
+      <scope name="Project Source Files" level="WARNING" enabled="true" editorAttributes="DEPRECATED_ATTRIBUTES" />
+    </inspection_tool>
+    <inspection_tool class="AndroidLintMonochromeLauncherIcon" enabled="true" level="WARNING" enabled_by_default="false">
+      <scope name="Project Source Files" level="WARNING" enabled="true" editorAttributes="DEPRECATED_ATTRIBUTES" />
+    </inspection_tool>
+    <inspection_tool class="AndroidLintNegativeMargin" enabled="true" level="WARNING" enabled_by_default="false">
+      <scope name="Project Source Files" level="WARNING" enabled="true" editorAttributes="DEPRECATED_ATTRIBUTES" />
+    </inspection_tool>
+    <inspection_tool class="AndroidLintReportShortcutUsage" enabled="true" level="INFO" enabled_by_default="false">
+      <scope name="Project Source Files" level="WARNING" enabled="true" editorAttributes="DEPRECATED_ATTRIBUTES" />
+    </inspection_tool>
+    <inspection_tool class="AndroidLintSelectableText" enabled="true" level="WARNING" enabled_by_default="false">
+      <scope name="Project Source Files" level="WARNING" enabled="true" editorAttributes="DEPRECATED_ATTRIBUTES" />
+    </inspection_tool>
+    <inspection_tool class="AndroidLintSmallSp" enabled="true" level="WARNING" enabled_by_default="false">
+      <scope name="Project Source Files" level="WARNING" enabled="true" editorAttributes="DEPRECATED_ATTRIBUTES" />
+    </inspection_tool>
+    <inspection_tool class="AndroidLintSquareAndRoundTilePreviews" enabled="true" level="WARNING" enabled_by_default="false">
+      <scope name="Project Source Files" level="WARNING" enabled="true" editorAttributes="DEPRECATED_ATTRIBUTES" />
+    </inspection_tool>
+    <inspection_tool class="AndroidLintTextFields" enabled="true" level="WARNING" enabled_by_default="false">
+      <scope name="Project Source Files" level="WARNING" enabled="true" editorAttributes="DEPRECATED_ATTRIBUTES" />
+    </inspection_tool>
+    <inspection_tool class="AndroidLintTilePreviewImageFormat" enabled="true" level="ERROR" enabled_by_default="false">
+      <scope name="Project Source Files" level="WARNING" enabled="true" editorAttributes="DEPRECATED_ATTRIBUTES" />
+    </inspection_tool>
+    <inspection_tool class="AndroidLintTypographyDashes" enabled="true" level="WARNING" enabled_by_default="false">
+      <scope name="Project Source Files" level="WARNING" enabled="true" editorAttributes="DEPRECATED_ATTRIBUTES" />
+    </inspection_tool>
+    <inspection_tool class="AndroidLintTypographyEllipsis" enabled="true" level="WARNING" enabled_by_default="false">
+      <scope name="Project Source Files" level="WARNING" enabled="true" editorAttributes="DEPRECATED_ATTRIBUTES" />
+    </inspection_tool>
+    <inspection_tool class="AndroidLintTypographyFractions" enabled="true" level="WARNING" enabled_by_default="false">
+      <scope name="Project Source Files" level="WARNING" enabled="true" editorAttributes="DEPRECATED_ATTRIBUTES" />
+    </inspection_tool>
+    <inspection_tool class="AndroidLintTypographyOther" enabled="true" level="WARNING" enabled_by_default="false">
+      <scope name="Project Source Files" level="WARNING" enabled="true" editorAttributes="DEPRECATED_ATTRIBUTES" />
+    </inspection_tool>
+    <inspection_tool class="AndroidLintTypographyQuotes" enabled="true" level="WARNING" enabled_by_default="false">
+      <scope name="Project Source Files" level="WARNING" enabled="true" editorAttributes="DEPRECATED_ATTRIBUTES" />
+    </inspection_tool>
+    <inspection_tool class="AndroidLintUseTomlInstead" enabled="true" level="WARNING" enabled_by_default="true" editorAttributes="WARNING_ATTRIBUTES" />
+    <inspection_tool class="AndroidLintViewConstructor" enabled="true" level="WARNING" enabled_by_default="false">
+      <scope name="Project Source Files" level="WARNING" enabled="true" editorAttributes="DEPRECATED_ATTRIBUTES" />
+    </inspection_tool>
+    <inspection_tool class="AndroidLintWearBackNavigation" enabled="true" level="WARNING" enabled_by_default="false">
+      <scope name="Project Source Files" level="WARNING" enabled="true" editorAttributes="DEPRECATED_ATTRIBUTES" />
+    </inspection_tool>
+    <inspection_tool class="AndroidLintWearPasswordInput" enabled="true" level="ERROR" enabled_by_default="false">
+      <scope name="Project Source Files" level="WARNING" enabled="true" editorAttributes="DEPRECATED_ATTRIBUTES" />
+    </inspection_tool>
+    <inspection_tool class="AndroidLintWearRecents" enabled="true" level="WARNING" enabled_by_default="false">
+      <scope name="Project Source Files" level="WARNING" enabled="true" editorAttributes="DEPRECATED_ATTRIBUTES" />
+    </inspection_tool>
+    <inspection_tool class="AndroidLintWearSplashScreen" enabled="true" level="WARNING" enabled_by_default="false">
+      <scope name="Project Source Files" level="WARNING" enabled="true" editorAttributes="DEPRECATED_ATTRIBUTES" />
+    </inspection_tool>
+    <inspection_tool class="AndroidLintWebpUnsupported" enabled="true" level="ERROR" enabled_by_default="false">
+      <scope name="Project Source Files" level="WARNING" enabled="true" editorAttributes="DEPRECATED_ATTRIBUTES" />
+    </inspection_tool>
+    <inspection_tool class="TomlUnresolvedReference" enabled="false" level="INFORMATION" enabled_by_default="false" editorAttributes="INFORMATION_ATTRIBUTES" />
+  </profile>
+</component>

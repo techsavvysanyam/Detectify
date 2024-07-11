@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".facedetect.FaceDetectActivity">
+
+    <androidx.camera.view.PreviewView
+        android:id="@+id/previewFace"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"/>
+
+    <ImageButton
+        android:id="@+id/FaceScanIB"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/camerashutter"
+        android:scaleType="fitCenter"
+        android:src="@drawable/face_scan_img"
+        android:background="@drawable/ripple_effect"
+        />
+
+    <View
+        android:id="@+id/spacerView"
+        android:layout_width="0dp"
+        android:layout_height="30dp" />
+
+    <ImageButton
+        android:id="@+id/flashToggleIB"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="10dp"
+        android:layout_below="@id/spacerView"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/flashwork"
+        android:scaleType="centerCrop"
+        android:src="@drawable/flash_off"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        />
+
+    <ImageButton
+        android:id="@+id/flipCameraIB"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/flashToggleIB"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="10dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/cameraswitch"
+        android:scaleType="centerCrop"
+        android:src="@drawable/cameraflip"
+        tools:ignore="ImageContrastCheck" />
+
+    <LinearLayout
+        android:id="@+id/allFaceResults"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_above="@+id/FaceScanIB" >
+
+        <LinearLayout
+            android:id="@+id/copyFaceResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp"
+            android:textIsSelectable="true"
+            android:background="@drawable/blue_box_background"
+            tools:ignore="UseCompoundDrawables">
+
+            <TextView
+                android:id="@+id/faceResultTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/face_detection_result"
+                android:textColor="@android:color/white"
+                android:textColorHint="#90A4AE"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:padding="4dp"
+                android:paddingStart="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/copybutton"
+                android:scaleType="centerCrop"
+                android:src="@drawable/copy_button"
+                tools:ignore="RtlSymmetry,TouchTargetSizeCheck" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/face_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/blue_box_background"
+            android:hint="@string/number_of_faces"
+            android:textColor="@color/white"
+            android:textColorHint="#90A4AE"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/smiling_probability"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/blue_box_background"
+            android:hint="@string/smiling_probability"
+            android:textColor="@color/white"
+            android:textColorHint="#90A4AE"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/right_eye_open_probability"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/blue_box_background"
+            android:hint="@string/right_eye_open_probability"
+            android:textColor="@color/white"
+            android:textColorHint="#90A4AE"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/left_eye_open_probability"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/blue_box_background"
+            android:hint="@string/left_eye_open_probability"
+            android:textColor="@color/white"
+            android:textColorHint="#90A4AE"
+            android:textSize="18sp" />
+        </LinearLayout>
+
+    </RelativeLayout>

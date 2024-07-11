@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dark Theme Colors -->
+    <color name="colorPrimary">#5B03A9F4</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#5B03A9F4</color>
+    <color name="colorBackground">#000000</color>
+    <color name="colorTextPrimary">#F4F3F0</color>
+    <color name="colorButtonBackground">#5B03A9F4</color>
+    <color name="colorButtonText">#000000</color>
+    <color name="splash_background">#000000</color>
+</resources>

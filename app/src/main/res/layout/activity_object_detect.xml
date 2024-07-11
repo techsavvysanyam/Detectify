@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".objectdetection.ObjectDetectActivity">
+
+    <androidx.camera.view.PreviewView
+        android:id="@+id/previewObject"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"/>
+
+    <ImageButton
+        android:id="@+id/ObjectScanIB"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/camerashutter"
+        android:scaleType="fitCenter"
+        android:src="@drawable/object_dec_img"
+        android:background="@drawable/ripple_effect"
+        />
+
+    <View
+        android:id="@+id/spacerView"
+        android:layout_width="0dp"
+        android:layout_height="30dp" />
+
+    <ImageButton
+        android:id="@+id/flashToggleIB"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="10dp"
+        android:layout_below="@id/spacerView"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/flashwork"
+        android:scaleType="centerCrop"
+        android:src="@drawable/flash_off"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        />
+
+    <ImageButton
+        android:id="@+id/flipCameraIB"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/flashToggleIB"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="10dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/cameraswitch"
+        android:scaleType="centerCrop"
+        android:src="@drawable/cameraflip"
+        tools:ignore="ImageContrastCheck" />
+
+    <TextView
+        android:id="@+id/objectResultTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/object_result"
+        android:textSize="18sp"
+        android:layout_margin="4dp"
+        android:layout_above="@+id/objectConfidence"
+        android:textColor="@android:color/white"
+        android:background="@drawable/blue_box_background" />
+
+    <TextView
+        android:id="@+id/objectConfidence"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/confidence"
+        android:textColor="@color/white"
+        android:layout_above="@+id/objectTrackingId"
+        android:textSize="18sp"
+        android:layout_margin="4dp"
+        android:background="@drawable/blue_box_background"/>
+
+    <TextView
+        android:id="@+id/objectTrackingId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/object_id"
+        android:textColor="@color/white"
+        android:layout_above="@id/copyObjectR"
+        android:textSize="18sp"
+        android:layout_margin="4dp"
+        android:background="@drawable/blue_box_background"/>
+
+    <ImageButton
+        android:id="@+id/copyObjectR"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_margin="6dp"
+        android:layout_above="@id/ObjectScanIB"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/copybutton"
+        android:scaleType="centerCrop"
+        android:src="@drawable/copy_button"
+        tools:ignore="TouchTargetSizeCheck" />
+</RelativeLayout>
+
+

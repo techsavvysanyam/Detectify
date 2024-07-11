@@ -1,0 +1,8 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <solid android:color="@color/colorButtonBackground" /> <!-- Change this to the desired blue color -->
+    <corners android:radius="8dp" /><!-- Adjust the radius for rounded corners -->
+    <padding
+        android:left="8dp"
+        android:right="8dp" />
+</shape>
+

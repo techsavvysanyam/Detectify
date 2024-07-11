@@ -1,0 +1,415 @@
+Index: app/src/main/res/layout/activity_main.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_main.xml b/app/src/main/res/layout/activity_main.xml
+--- a/app/src/main/res/layout/activity_main.xml	
++++ b/app/src/main/res/layout/activity_main.xml	(date 1720186429074)
+@@ -90,9 +90,10 @@
+                     android:padding="10dp">
+ 
+                     <ImageView
+-                        android:layout_width="24dp"
+-                        android:layout_height="24dp"
+-                        android:layout_marginEnd="10dp"
++                        android:layout_width="28dp"
++                        android:layout_height="28dp"
++                        android:layout_marginEnd="15dp"
++                        android:layout_marginStart="10dp"
+                         android:contentDescription="@string/open_camera"
+                         android:src="@drawable/camera_logo"
+                         tools:ignore="ImageContrastCheck" />
+@@ -117,9 +118,10 @@
+                     android:padding="10dp">
+ 
+                     <ImageView
+-                        android:layout_width="24dp"
+-                        android:layout_height="25dp"
+-                        android:layout_marginEnd="10dp"
++                        android:layout_width="28dp"
++                        android:layout_height="28dp"
++                        android:layout_marginEnd="15dp"
++                        android:layout_marginStart="10dp"
+                         android:contentDescription="@string/barcodebutton"
+                         android:src="@drawable/qr_code_img" />
+ 
+@@ -143,9 +145,10 @@
+                     android:padding="10dp">
+ 
+                     <ImageView
+-                        android:layout_width="24dp"
+-                        android:layout_height="24dp"
+-                        android:layout_marginEnd="10dp"
++                        android:layout_width="28dp"
++                        android:layout_height="28dp"
++                        android:layout_marginEnd="15dp"
++                        android:layout_marginStart="10dp"
+                         android:contentDescription="@string/facebutton"
+                         android:src="@drawable/face_scan_img"
+                         tools:ignore="ImageContrastCheck" />
+@@ -171,9 +174,10 @@
+                     tools:ignore="VisualLintBounds">
+ 
+                     <ImageView
+-                        android:layout_width="24dp"
+-                        android:layout_height="24dp"
+-                        android:layout_marginEnd="10dp"
++                        android:layout_width="28dp"
++                        android:layout_height="28dp"
++                        android:layout_marginEnd="15dp"
++                        android:layout_marginStart="10dp"
+                         android:contentDescription="@string/objectdbutton"
+                         android:src="@drawable/object_dec_img"
+                         tools:ignore="ImageContrastCheck" />
+@@ -199,9 +203,10 @@
+                     tools:ignore="VisualLintBounds">
+ 
+                     <ImageView
+-                        android:layout_width="24dp"
+-                        android:layout_height="24dp"
+-                        android:layout_marginEnd="10dp"
++                        android:layout_width="28dp"
++                        android:layout_height="28dp"
++                        android:layout_marginEnd="15dp"
++                        android:layout_marginStart="10dp"
+                         android:contentDescription="@string/textrbutton"
+                         android:src="@drawable/text_rec_img"
+                         tools:ignore="ImageContrastCheck" />
+Index: app/src/main/res/layout/activity_barcode.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_barcode.xml b/app/src/main/res/layout/activity_barcode.xml
+--- a/app/src/main/res/layout/activity_barcode.xml	
++++ b/app/src/main/res/layout/activity_barcode.xml	(date 1720194371452)
+@@ -15,15 +15,15 @@
+ 
+     <ImageButton
+         android:id="@+id/BarcodeScanIB"
+-        android:layout_width="120dp"
+-        android:layout_height="75dp"
++        android:layout_width="70dp"
++        android:layout_height="70dp"
+         android:layout_alignParentBottom="true"
+         android:layout_marginBottom="30dp"
+         android:layout_centerHorizontal="true"
+         android:contentDescription="@string/camerashutter"
+         android:scaleType="fitCenter"
+-        android:src="@drawable/qr_code_logo"
+-        android:background="?attr/selectableItemBackgroundBorderless"
++        android:src="@drawable/qr_code_img"
++        android:background="@drawable/ripple_effect"
+         />
+ 
+     <View
+Index: app/src/main/res/layout/activity_face_detect.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_face_detect.xml b/app/src/main/res/layout/activity_face_detect.xml
+--- a/app/src/main/res/layout/activity_face_detect.xml	
++++ b/app/src/main/res/layout/activity_face_detect.xml	(date 1720194306559)
+@@ -14,15 +14,15 @@
+ 
+     <ImageButton
+         android:id="@+id/FaceScanIB"
+-        android:layout_width="100dp"
+-        android:layout_height="70dp"
++        android:layout_width="75dp"
++        android:layout_height="75dp"
+         android:layout_alignParentBottom="true"
+         android:layout_marginBottom="30dp"
+         android:layout_centerHorizontal="true"
+         android:contentDescription="@string/camerashutter"
+         android:scaleType="fitCenter"
+         android:src="@drawable/face_scan_img"
+-        android:background="?attr/selectableItemBackgroundBorderless"
++        android:background="@drawable/ripple_effect"
+         />
+ 
+     <View
+Index: app/src/main/res/layout/activity_object_detect.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_object_detect.xml b/app/src/main/res/layout/activity_object_detect.xml
+--- a/app/src/main/res/layout/activity_object_detect.xml	
++++ b/app/src/main/res/layout/activity_object_detect.xml	(date 1720194306572)
+@@ -15,7 +15,7 @@
+ 
+     <ImageButton
+         android:id="@+id/ObjectScanIB"
+-        android:layout_width="100dp"
++        android:layout_width="70dp"
+         android:layout_height="70dp"
+         android:layout_alignParentBottom="true"
+         android:layout_marginBottom="30dp"
+@@ -23,7 +23,7 @@
+         android:contentDescription="@string/camerashutter"
+         android:scaleType="fitCenter"
+         android:src="@drawable/object_dec_img"
+-        android:background="?attr/selectableItemBackgroundBorderless"
++        android:background="@drawable/ripple_effect"
+         />
+ 
+     <View
+Index: app/src/main/res/values/colors.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/values/colors.xml b/app/src/main/res/values/colors.xml
+--- a/app/src/main/res/values/colors.xml	
++++ b/app/src/main/res/values/colors.xml	(date 1720193565319)
+@@ -15,6 +15,8 @@
+     <color name="colorButtonText">#F4F3F0</color>
+     <color name="colorScrollbar">#5B03A9F4</color>
+     <color name="splash_background">#E7F9FF</color> <!--bluish light-->
++    <color name="ripple_color">#8B80C7FF</color> <!-- Light Blue -->
++    <color name="mask_color">#8BE0F0FF</color> <!-- Blue with transparency -->
+ 
+ 
+ </resources>
+\ No newline at end of file
+Index: app/src/main/res/drawable/qr_code_img.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/drawable/qr_code_img.xml b/app/src/main/res/drawable/qr_code_img.xml
+--- a/app/src/main/res/drawable/qr_code_img.xml	
++++ b/app/src/main/res/drawable/qr_code_img.xml	(date 1720183981986)
+@@ -6,11 +6,11 @@
+   <path
+       android:pathData="M2,1L1,1v8h2L3,3h6L9,1L2,1ZM2,23L1,23v-8h2v6h6v2L2,23ZM23,1v8h-2L21,3l-6,0 0,-2h8ZM23,22v1h-8l0,-2h6v-6l2,0v7Z"
+       android:strokeWidth="1"
+-      android:fillColor="#8fbffa"
++      android:fillColor="#2859c5"
+       android:fillType="evenOdd"/>
+   <path
+       android:pathData="M5,11L5,5h6v6L5,11ZM7,9 L9,9 9,7 7,7 7,9ZM13,11L13,5h6v6h-6ZM15,9 L17,9L17,7l-2,0v2ZM5,18v1h6v-6L5,13v5ZM9,17L7,17l0,-2h2l0,2ZM13,13v6h6.25v-2L15,17v-4h-2ZM17,13v2h2v-2h-2Z"
+       android:strokeWidth="1"
+-      android:fillColor="#8fbffa"
++      android:fillColor="#3D8BFF"
+       android:fillType="evenOdd"/>
+ </vector>
+Index: app/src/main/res/drawable/rounded_mask.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/drawable/rounded_mask.xml b/app/src/main/res/drawable/rounded_mask.xml
+new file mode 100644
+--- /dev/null	(date 1720194184203)
++++ b/app/src/main/res/drawable/rounded_mask.xml	(date 1720194184203)
+@@ -0,0 +1,5 @@
++<?xml version="1.0" encoding="utf-8"?>
++<shape xmlns:android="http://schemas.android.com/apk/res/android">
++    <solid android:color="@color/mask_color" />
++    <corners android:radius="36dp" /> <!-- Adjust the radius as needed -->
++</shape>
+Index: app/src/main/res/drawable/ripple_effect.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/drawable/ripple_effect.xml b/app/src/main/res/drawable/ripple_effect.xml
+new file mode 100644
+--- /dev/null	(date 1720193875669)
++++ b/app/src/main/res/drawable/ripple_effect.xml	(date 1720193875669)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="utf-8"?>
++<ripple xmlns:android="http://schemas.android.com/apk/res/android"
++    android:color="@color/ripple_color">
++    <item android:id="@android:id/mask"
++        android:drawable="@drawable/rounded_mask" />
++</ripple>
+Index: app/src/main/res/drawable/text_rec_img.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/drawable/text_rec_img.xml b/app/src/main/res/drawable/text_rec_img.xml
+--- a/app/src/main/res/drawable/text_rec_img.xml	
++++ b/app/src/main/res/drawable/text_rec_img.xml	(date 1720184117786)
+@@ -6,7 +6,7 @@
+   <path
+       android:pathData="M18,9L6,9L6,6h12v3ZM18,13.5L6,13.5v-3h12v3ZM6,18h6v-3L6,15v3Z"
+       android:strokeWidth="1"
+-      android:fillColor="#8fbffa"
++      android:fillColor="#3D8BFF"
+       android:fillType="evenOdd"/>
+   <path
+       android:pathData="M2,1L1,1v7h2L3,3h5L8,1L2,1ZM16,3h5v5h2L23,1h-7v2ZM21,21v-5h2v7h-7v-2h5ZM3,16v5h5v2L1,23v-7h2Z"
+Index: app/src/main/res/drawable/face_scan_img.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/drawable/face_scan_img.xml b/app/src/main/res/drawable/face_scan_img.xml
+--- a/app/src/main/res/drawable/face_scan_img.xml	
++++ b/app/src/main/res/drawable/face_scan_img.xml	(date 1720184163768)
+@@ -11,6 +11,6 @@
+   <path
+       android:pathData="M9,10L9,6h-2v4h2ZM17,10L17,6h-2v4h2ZM12,18c-1.925,0 -3.808,-0.377 -5.406,-1.086l0.811,-1.828c1.316,0.584 2.919,0.914 4.594,0.914 1.675,0 3.278,-0.33 4.594,-0.914l0.811,1.828C15.807,17.623 13.925,18 12,18ZM11,6v6L9,12v2h4L13,6h-2Z"
+       android:strokeWidth="1"
+-      android:fillColor="#8fbffa"
++      android:fillColor="#3D8BFF"
+       android:fillType="evenOdd"/>
+ </vector>
+Index: app/src/main/res/drawable/object_dec_img.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/drawable/object_dec_img.xml b/app/src/main/res/drawable/object_dec_img.xml
+--- a/app/src/main/res/drawable/object_dec_img.xml	
++++ b/app/src/main/res/drawable/object_dec_img.xml	(date 1720184269604)
+@@ -6,7 +6,7 @@
+   <path
+       android:pathData="M9.4,5.228h-0.554l-0.294,0.47 -1.331,2.13H4.5V17.628h15V7.828h-2.721l-1.331,-2.13 -0.294,-0.47H9.4Z"
+       android:strokeWidth="1"
+-      android:fillColor="#8fbffa"
++      android:fillColor="#3D8BFF"
+       android:fillType="evenOdd"/>
+   <path
+       android:pathData="M1,1h6v2L3,3v4L1,7L1,1ZM1,23h6v-2L3,21v-4L1,17v6ZM22,1h1v6h-2L21,3h-4L17,1h5ZM23,23h-6v-2h4v-4h2v6ZM11.5,11h-1v3h3v-3h-2Z"
+Index: app/src/main/res/drawable/object_dec_logo.xml
+===================================================================
+diff --git a/app/src/main/res/drawable/object_dec_logo.xml b/app/src/main/res/drawable/object_dec_logo.xml
+deleted file mode 100644
+--- a/app/src/main/res/drawable/object_dec_logo.xml	
++++ /dev/null	
+@@ -1,16 +0,0 @@
+-<vector xmlns:android="http://schemas.android.com/apk/res/android"
+-    android:width="24dp"
+-    android:height="24dp"
+-    android:viewportWidth="24"
+-    android:viewportHeight="24">
+-  <path
+-      android:pathData="M9.4,5.228h-0.554l-0.294,0.47 -1.331,2.13H4.5V17.628h15V7.828h-2.721l-1.331,-2.13 -0.294,-0.47H9.4Z"
+-      android:strokeWidth="1"
+-      android:fillColor="#8fbffa"
+-      android:fillType="evenOdd"/>
+-  <path
+-      android:pathData="M1,1h6v2L3,3v4L1,7L1,1ZM1,23h6v-2L3,21v-4L1,17v6ZM22,1h1v6h-2L21,3h-4L17,1h5ZM23,23h-6v-2h4v-4h2v6ZM11.5,11h-1v3h3v-3h-2Z"
+-      android:strokeWidth="1"
+-      android:fillColor="#2859c5"
+-      android:fillType="evenOdd"/>
+-</vector>
+Index: app/src/main/res/drawable/qr_code_logo.xml
+===================================================================
+diff --git a/app/src/main/res/drawable/qr_code_logo.xml b/app/src/main/res/drawable/qr_code_logo.xml
+deleted file mode 100644
+--- a/app/src/main/res/drawable/qr_code_logo.xml	
++++ /dev/null	
+@@ -1,16 +0,0 @@
+-<vector xmlns:android="http://schemas.android.com/apk/res/android"
+-    android:width="24dp"
+-    android:height="24dp"
+-    android:viewportWidth="24"
+-    android:viewportHeight="24">
+-  <path
+-      android:pathData="M2,1L1,1v8h2L3,3h6L9,1L2,1ZM2,23L1,23v-8h2v6h6v2L2,23ZM23,1v8h-2L21,3l-6,0 0,-2h8ZM23,22v1h-8l0,-2h6v-6l2,0v7Z"
+-      android:strokeWidth="1"
+-      android:fillColor="#2859c5"
+-      android:fillType="evenOdd"/>
+-  <path
+-      android:pathData="M5,11L5,5h6v6L5,11ZM7,9 L9,9 9,7 7,7 7,9ZM13,11L13,5h6v6h-6ZM15,9 L17,9L17,7l-2,0v2ZM5,18v1h6v-6L5,13v5ZM9,17L7,17l0,-2h2l0,2ZM13,13v6h6.25v-2L15,17v-4h-2ZM17,13v2h2v-2h-2Z"
+-      android:strokeWidth="1"
+-      android:fillColor="#8fbffa"
+-      android:fillType="evenOdd"/>
+-</vector>
+Index: app/src/main/res/drawable-night/qr_code_img.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/drawable-night/qr_code_img.xml b/app/src/main/res/drawable-night/qr_code_img.xml
+--- a/app/src/main/res/drawable-night/qr_code_img.xml	
++++ b/app/src/main/res/drawable-night/qr_code_img.xml	(date 1720184052816)
+@@ -11,6 +11,6 @@
+   <path
+       android:pathData="M5,11L5,5h6v6L5,11ZM7,9 L9,9 9,7 7,7 7,9ZM13,11L13,5h6v6h-6ZM15,9 L17,9L17,7l-2,0v2ZM5,18v1h6v-6L5,13v5ZM9,17L7,17l0,-2h2l0,2ZM13,13v6h6.25v-2L15,17v-4h-2ZM17,13v2h2v-2h-2Z"
+       android:strokeWidth="1"
+-      android:fillColor="#8fbffa"
++      android:fillColor="#3D8BFF"
+       android:fillType="evenOdd"/>
+ </vector>
+Index: app/src/main/res/drawable-night/text_rec_img.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/drawable-night/text_rec_img.xml b/app/src/main/res/drawable-night/text_rec_img.xml
+--- a/app/src/main/res/drawable-night/text_rec_img.xml	
++++ b/app/src/main/res/drawable-night/text_rec_img.xml	(date 1720184126470)
+@@ -6,7 +6,7 @@
+   <path
+       android:pathData="M18,9L6,9L6,6h12v3ZM18,13.5L6,13.5v-3h12v3ZM6,18h6v-3L6,15v3Z"
+       android:strokeWidth="1"
+-      android:fillColor="#8fbffa"
++      android:fillColor="#3D8BFF"
+       android:fillType="evenOdd"/>
+   <path
+       android:pathData="M2,1L1,1v7h2L3,3h5L8,1L2,1ZM16,3h5v5h2L23,1h-7v2ZM21,21v-5h2v7h-7v-2h5ZM3,16v5h5v2L1,23v-7h2Z"
+Index: app/src/main/res/drawable-night/face_scan_img.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/drawable-night/face_scan_img.xml b/app/src/main/res/drawable-night/face_scan_img.xml
+--- a/app/src/main/res/drawable-night/face_scan_img.xml	
++++ b/app/src/main/res/drawable-night/face_scan_img.xml	(date 1720184169033)
+@@ -11,6 +11,6 @@
+   <path
+       android:pathData="M9,10L9,6h-2v4h2ZM17,10L17,6h-2v4h2ZM12,18c-1.925,0 -3.808,-0.377 -5.406,-1.086l0.811,-1.828c1.316,0.584 2.919,0.914 4.594,0.914 1.675,0 3.278,-0.33 4.594,-0.914l0.811,1.828C15.807,17.623 13.925,18 12,18ZM11,6v6L9,12v2h4L13,6h-2Z"
+       android:strokeWidth="1"
+-      android:fillColor="#8fbffa"
++      android:fillColor="#3D8BFF"
+       android:fillType="evenOdd"/>
+ </vector>
+Index: app/src/main/res/drawable-night/object_dec_img.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/drawable-night/object_dec_img.xml b/app/src/main/res/drawable-night/object_dec_img.xml
+--- a/app/src/main/res/drawable-night/object_dec_img.xml	
++++ b/app/src/main/res/drawable-night/object_dec_img.xml	(date 1720184147145)
+@@ -6,7 +6,7 @@
+   <path
+       android:pathData="M9.4,5.228h-0.554l-0.294,0.47 -1.331,2.13H4.5V17.628h15V7.828h-2.721l-1.331,-2.13 -0.294,-0.47H9.4Z"
+       android:strokeWidth="1"
+-      android:fillColor="#8fbffa"
++      android:fillColor="#3D8BFF"
+       android:fillType="evenOdd"/>
+   <path
+       android:pathData="M1,1h6v2L3,3v4L1,7L1,1ZM1,23h6v-2L3,21v-4L1,17v6ZM22,1h1v6h-2L21,3h-4L17,1h5ZM23,23h-6v-2h4v-4h2v6ZM11.5,11h-1v3h3v-3h-2Z"
+Index: app/src/main/res/drawable-night/face_scan_logo.xml
+===================================================================
+diff --git a/app/src/main/res/drawable-night/face_scan_logo.xml b/app/src/main/res/drawable-night/face_scan_logo.xml
+deleted file mode 100644
+--- a/app/src/main/res/drawable-night/face_scan_logo.xml	
++++ /dev/null	
+@@ -1,16 +0,0 @@
+-<vector xmlns:android="http://schemas.android.com/apk/res/android"
+-    android:width="24dp"
+-    android:height="24dp"
+-    android:viewportWidth="24"
+-    android:viewportHeight="24">
+-  <path
+-      android:pathData="M1,1h7v2L3,3v5L1,8L1,1ZM3,16v5h5v2L1,23v-7h2ZM21,16v5h-5v2h7v-7h-2ZM16,3h5v5h2L23,1h-7v2Z"
+-      android:strokeWidth="1"
+-      android:fillColor="#2859c5"
+-      android:fillType="evenOdd"/>
+-  <path
+-      android:pathData="M9,10L9,6h-2v4h2ZM17,10L17,6h-2v4h2ZM12,18c-1.925,0 -3.808,-0.377 -5.406,-1.086l0.811,-1.828c1.316,0.584 2.919,0.914 4.594,0.914 1.675,0 3.278,-0.33 4.594,-0.914l0.811,1.828C15.807,17.623 13.925,18 12,18ZM11,6v6L9,12v2h4L13,6h-2Z"
+-      android:strokeWidth="1"
+-      android:fillColor="#8fbffa"
+-      android:fillType="evenOdd"/>
+-</vector>

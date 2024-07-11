@@ -1,0 +1,39 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/splash_background"
+    android:gravity="center">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:contentDescription="@string/splash_logo"
+        android:src="@drawable/splash_png" />
+
+    <ImageView
+        android:id="@+id/loadBarUpLogo"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_below="@id/logo"
+        android:layout_marginTop="20dp"
+        android:contentDescription="@string/loadbaruplogo"
+        android:src="@drawable/camera_splash_img"/>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:visibility="visible"
+        android:layout_below="@id/loadBarUpLogo"
+        android:layout_margin="-10dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:indeterminate="false"
+        android:max="100"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:progressDrawable="@drawable/progress_bar_progress"/>
+</RelativeLayout>

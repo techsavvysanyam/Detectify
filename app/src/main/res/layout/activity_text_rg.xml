@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".textrecognition.TextRgActivity">
+
+    <androidx.camera.view.PreviewView
+        android:id="@+id/previewText"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"/>
+
+
+
+    <View
+        android:id="@+id/spacerView"
+        android:layout_width="0dp"
+        android:layout_height="30dp" />
+
+    <ImageButton
+        android:id="@+id/flashToggleIB"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="10dp"
+        android:layout_below="@id/spacerView"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/flashwork"
+        android:scaleType="centerCrop"
+        android:src="@drawable/flash_off"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        />
+
+    <ImageButton
+        android:id="@+id/flipCameraIB"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/flashToggleIB"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="10dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/cameraswitch"
+        android:scaleType="centerCrop"
+        android:src="@drawable/cameraflip"
+        tools:ignore="ImageContrastCheck" />
+
+    <!-- TAKE PICTURE Button -->
+    <LinearLayout
+        android:id="@+id/takePictureButton"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:background="@drawable/button_background"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:gravity="center" >
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/camera_loading"
+            tools:ignore="ImageContrastCheck" />
+
+        <View
+            android:layout_width="23dp"
+            android:layout_height="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/snap_amp_extract_text"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="39dp"
+            android:layout_height="5dp" />
+    </LinearLayout>
+
+    <!-- PICK IMAGE Button -->
+    <LinearLayout
+        android:id="@+id/pickImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:background="@drawable/button_background"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/takePictureButton"
+        android:padding="10dp"
+        android:gravity="center" >
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="10dp"
+            android:contentDescription="@string/image_picker"
+            android:src="@drawable/pick_img"
+            android:scaleType="centerCrop"
+            tools:ignore="ImageContrastCheck" />
+
+        <View
+            android:layout_width="26dp"
+            android:layout_height="0dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pick_amp_extract_text"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+        <View
+            android:layout_width="42dp"
+            android:layout_height="0dp" />
+    </LinearLayout>
+
+    <!-- TextScaNNer Button -->
+    <LinearLayout
+        android:id="@+id/TextScanIB"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:background="@drawable/button_background"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:layout_above="@+id/pickImageButton"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/text_realtime" />
+
+        <TextView
+            android:id="@+id/textRgLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Real Time Text Recognition"
+            android:textDirection="rtl"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </LinearLayout>
+</RelativeLayout>
+
+<!--<Button-->
+<!--android:id="@+id/pickImageButton"-->
+<!--android:layout_width="wrap_content"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:text="Pick Image"-->
+<!--android:background="@drawable/blue_box_background"-->
+<!--android:layout_alignParentBottom="true"-->
+<!--android:layout_marginBottom="44dp"-->
+<!--android:layout_toStartOf="@+id/TextScanIB" />-->
+
+<!--<TextView-->
+<!--android:id="@+id/textRgLine"-->
+<!--android:layout_width="wrap_content"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:layout_above="@+id/copyTextR"-->
+<!--android:layout_centerHorizontal="true"-->
+<!--android:layout_marginTop="20dp"-->
+<!--android:layout_marginBottom="8dp"-->
+<!--android:background="@drawable/blue_box_background"-->
+<!--android:hint="@string/text_line_recognition_result"-->
+<!--android:textIsSelectable="true"-->
+<!--android:textColor="@android:color/white"-->
+<!--android:textColorHint="#90A4AE"-->
+<!--android:textSize="18sp" />-->
+
+<!--<Button-->
+<!--android:id="@+id/takePictureButton"-->
+<!--android:layout_width="wrap_content"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:text="Take Picture"-->
+<!--android:background="@drawable/blue_box_background"-->
+<!--android:layout_alignParentBottom="true"-->
+<!--android:layout_marginBottom="44dp"-->
+<!--android:layout_toEndOf="@+id/TextScanIB"/>-->
+
+<!--<ImageButton-->
+<!--android:id="@+id/copyTextR"-->
+<!--android:layout_width="25dp"-->
+<!--android:layout_height="25dp"-->
+<!--android:layout_alignParentEnd="true"-->
+<!--android:layout_above="@id/TextScanIB"-->
+<!--android:background="?attr/selectableItemBackgroundBorderless"-->
+<!--android:contentDescription="@string/copybutton"-->
+<!--android:scaleType="centerCrop"-->
+<!--android:layout_margin="6dp"-->
+<!--android:src="@drawable/copy_button"-->
+<!--tools:ignore="TouchTargetSizeCheck" />-->
+
+<!--<ImageButton-->
+<!--android:id="@+id/TextScanIB"-->
+<!--android:layout_width="120dp"-->
+<!--android:layout_height="75dp"-->
+<!--android:layout_alignParentBottom="true"-->
+<!--android:layout_marginBottom="30dp"-->
+<!--android:layout_centerHorizontal="true"-->
+<!--android:contentDescription="@string/camerashutter"-->
+<!--android:scaleType="centerInside"-->
+<!--android:src="@drawable/text_scan"-->
+<!--android:background="?attr/selectableItemBackgroundBorderless"-->
+<!--    />-->
