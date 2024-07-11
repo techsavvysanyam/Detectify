@@ -12,10 +12,10 @@ Detectify is an Android application designed to Scan, Analyze, Recognize, and De
 
 ## Screenshots
 
-<img src="screenshots/screenshot1.jpg" alt="Screenshot 1" width="300"/>
-<img src="screenshots/screenshot2.jpg" alt="Screenshot 2" width="300"/>
-
-## Download and Installation
+<p align="center">
+  <img src="screenshots/screenshot1.jpg" alt="Screenshot 1" width="200" style="margin-right: 10px;"/>
+  <img src="screenshots/screenshot2.jpg" alt="Screenshot 2" width="200"/>
+</p>
 
 ### Prerequisites
 
@@ -36,6 +36,13 @@ Detectify is an Android application designed to Scan, Analyze, Recognize, and De
 ## Usage
 
 Once installed, open the Detectify app from your app drawer. You can start using the features right away. For features details check features section.
+
+### Acknowledgements
+
+This app uses the following third-party libraries:
+
+- **Google ML Kit**: [ML Kit for Android](https://developers.google.com/ml-kit)
+  - Licensed under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0)
 
 ## Contact
 
