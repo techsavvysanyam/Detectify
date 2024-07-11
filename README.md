@@ -24,11 +24,7 @@ Detectify is an Android application designed to Scan, Analyze, Recognize, and De
 
 ### Download APKs
 
-You can download the latest APK files from the links below:
-
-- [Detectify v1.0.0](apks/detectify_v1.0.0.apk)
-- [Detectify v1.1.0](apks/detectify_v2.0.0.apk)
-- [Detectify v1.2.0](apks/detectify_v2.1.0.apk)
+[Detectify Releases](https://github.com/Sanyamsoni77/Detectify/releases)
 
 ### Installation Steps
 
