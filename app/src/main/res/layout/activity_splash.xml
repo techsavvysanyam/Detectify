@@ -29,7 +29,6 @@
         android:layout_height="5dp"
         android:visibility="visible"
         android:layout_below="@id/loadBarUpLogo"
-        android:layout_margin="-10dp"
         android:layout_marginLeft="50dp"
         android:layout_marginRight="50dp"
         android:indeterminate="false"

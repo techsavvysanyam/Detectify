@@ -37,4 +37,10 @@
     <string name="pick_amp_extract_text"><![CDATA[Pick & Extract Text]]></string>
     <string name="image_picker">image_picker</string>
     <string name="snap_amp_extract_text"><![CDATA[Snap & Extract Text]]></string>
+    <string name="snapimg">snapimg</string>
+    <string name="realtimetextimg">realTimeTextimg</string>
+    <string name="real_time_text_recognition">Real Time Text Recognition</string>
+    <string name="no_text_present_in_taken_picture">No Text present in taken picture</string>
+    <string name="copyimg">copyImg</string>
+    <string name="copy">Copy</string>
 </resources>

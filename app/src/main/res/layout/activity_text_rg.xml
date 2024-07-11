@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
@@ -65,6 +64,7 @@
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_marginEnd="10dp"
+            android:contentDescription="@string/snapimg"
             android:src="@drawable/camera_loading"
             tools:ignore="ImageContrastCheck" />
 
@@ -137,6 +137,7 @@
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_marginEnd="10dp"
+            android:contentDescription="@string/realtimetextimg"
             android:scaleType="centerCrop"
             android:src="@drawable/text_realtime" />
 
@@ -144,7 +145,7 @@
             android:id="@+id/textRgLine"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Real Time Text Recognition"
+            android:text="@string/real_time_text_recognition"
             android:textDirection="rtl"
             android:textColor="@color/white"
             android:textSize="18sp" />
