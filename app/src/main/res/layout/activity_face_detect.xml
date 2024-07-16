@@ -17,7 +17,8 @@
         android:layout_width="75dp"
         android:layout_height="75dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true"
         android:contentDescription="@string/camerashutter"
         android:scaleType="fitCenter"
@@ -143,4 +144,14 @@
             android:textIsSelectable="true" android:textSize="18sp" />
         </LinearLayout>
 
+    <ImageButton
+        android:id="@+id/screenshotButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="35dp"
+        android:contentDescription="@string/screenshot"
+        android:src="@drawable/screenshot_icon"
+        android:background="?attr/selectableItemBackgroundBorderless" />
     </RelativeLayout>
