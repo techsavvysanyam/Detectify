@@ -10,26 +10,7 @@
         android:id="@+id/previewFace"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_centerInParent="true"/>
-
-    <ImageButton
-        android:id="@+id/FaceScanIB"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_centerHorizontal="true"
-        android:contentDescription="@string/camerashutter"
-        android:scaleType="fitCenter"
-        android:src="@drawable/face_scan_img"
-        android:background="@drawable/ripple_effect"
-        />
-
-    <View
-        android:id="@+id/spacerView"
-        android:layout_width="0dp"
-        android:layout_height="30dp" />
+        android:layout_centerInParent="true" />
 
     <ImageButton
         android:id="@+id/flashToggleIB"
@@ -37,13 +18,10 @@
         android:layout_height="50dp"
         android:layout_alignParentEnd="true"
         android:layout_margin="10dp"
-        android:layout_below="@id/spacerView"
-        android:layout_centerHorizontal="true"
         android:contentDescription="@string/flashwork"
         android:scaleType="centerCrop"
         android:src="@drawable/flash_off"
-        android:background="?attr/selectableItemBackgroundBorderless"
-        />
+        android:background="?attr/selectableItemBackgroundBorderless" />
 
     <ImageButton
         android:id="@+id/flipCameraIB"
@@ -56,15 +34,26 @@
         android:background="?attr/selectableItemBackgroundBorderless"
         android:contentDescription="@string/cameraswitch"
         android:scaleType="centerCrop"
-        android:src="@drawable/cameraflip"
-        tools:ignore="ImageContrastCheck" />
+        android:src="@drawable/cameraflip" />
+
+    <ImageButton
+        android:id="@+id/FaceScanIB"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/camerashutter"
+        android:scaleType="fitCenter"
+        android:src="@drawable/face_scan_img"
+        android:background="@drawable/ripple_effect" />
 
     <LinearLayout
         android:id="@+id/allFaceResults"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_above="@+id/FaceScanIB" >
+        android:layout_above="@+id/FaceScanIB">
 
         <LinearLayout
             android:id="@+id/copyFaceResult"
@@ -130,7 +119,8 @@
             android:hint="@string/right_eye_open_probability"
             android:textColor="@color/white"
             android:textColorHint="#90A4AE"
-            android:textIsSelectable="true" android:textSize="18sp" />
+            android:textIsSelectable="true"
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/left_eye_open_probability"
@@ -141,8 +131,9 @@
             android:hint="@string/left_eye_open_probability"
             android:textColor="@color/white"
             android:textColorHint="#90A4AE"
-            android:textIsSelectable="true" android:textSize="18sp" />
-        </LinearLayout>
+            android:textIsSelectable="true"
+            android:textSize="18sp" />
+    </LinearLayout>
 
     <ImageButton
         android:id="@+id/screenshotButton"
@@ -152,6 +143,7 @@
         android:layout_alignParentBottom="true"
         android:layout_margin="35dp"
         android:contentDescription="@string/screenshot"
-        android:src="@drawable/screenshot_icon"
+        android:src="@drawable/screenshot_img"
+        android:scaleType="fitCenter"
         android:background="?attr/selectableItemBackgroundBorderless" />
-    </RelativeLayout>
+</RelativeLayout>

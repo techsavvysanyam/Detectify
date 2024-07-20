@@ -58,6 +58,12 @@
         android:src="@drawable/cameraflip"
         tools:ignore="ImageContrastCheck" />
 
+    <LinearLayout
+        android:id="@+id/allObjectResults"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_above="@+id/copyObjectR">
     <TextView
         android:id="@+id/objectResultTextView"
         android:layout_width="wrap_content"
@@ -65,7 +71,6 @@
         android:text="@string/object_result"
         android:textSize="18sp"
         android:layout_margin="4dp"
-        android:layout_above="@+id/objectConfidence"
         android:textColor="@android:color/white"
         android:background="@drawable/blue_box_background" />
 
@@ -75,7 +80,6 @@
         android:layout_height="wrap_content"
         android:text="@string/confidence"
         android:textColor="@color/white"
-        android:layout_above="@+id/objectTrackingId"
         android:textSize="18sp"
         android:layout_margin="4dp"
         android:background="@drawable/blue_box_background"/>
@@ -86,22 +90,34 @@
         android:layout_height="wrap_content"
         android:text="@string/object_id"
         android:textColor="@color/white"
-        android:layout_above="@id/copyObjectR"
         android:textSize="18sp"
         android:layout_margin="4dp"
         android:background="@drawable/blue_box_background"/>
+    </LinearLayout>
 
     <ImageButton
         android:id="@+id/copyObjectR"
         android:layout_width="28dp"
         android:layout_height="28dp"
         android:layout_margin="6dp"
-        android:layout_above="@id/ObjectScanIB"
         android:background="?attr/selectableItemBackgroundBorderless"
         android:contentDescription="@string/copybutton"
+        android:layout_above="@id/ObjectScanIB"
         android:scaleType="centerCrop"
         android:src="@drawable/copy_button"
         tools:ignore="TouchTargetSizeCheck" />
+
+    <ImageButton
+        android:id="@+id/screenshotButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="40dp"
+        android:contentDescription="@string/screenshot"
+        android:src="@drawable/screenshot_img"
+        android:scaleType="fitCenter"
+        android:background="?attr/selectableItemBackgroundBorderless" />
 </RelativeLayout>
 
 

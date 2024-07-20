@@ -9,26 +9,7 @@
     <androidx.camera.view.PreviewView
         android:id="@+id/previewBarcode"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_centerInParent="true"/>
-
-    <ImageButton
-        android:id="@+id/BarcodeScanIB"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="30dp"
-        android:layout_centerHorizontal="true"
-        android:contentDescription="@string/camerashutter"
-        android:scaleType="fitCenter"
-        android:src="@drawable/qr_code_img"
-        android:background="@drawable/ripple_effect"
-        />
-
-    <View
-        android:id="@+id/spacerView"
-        android:layout_width="0dp"
-        android:layout_height="20dp" />
+        android:layout_height="match_parent" />
 
     <ImageButton
         android:id="@+id/flashToggleIB"
@@ -36,13 +17,10 @@
         android:layout_height="50dp"
         android:layout_alignParentEnd="true"
         android:layout_margin="10dp"
-        android:layout_below="@id/spacerView"
-        android:layout_centerHorizontal="true"
         android:contentDescription="@string/flashwork"
         android:scaleType="centerCrop"
         android:src="@drawable/flash_off"
-        android:background="?attr/selectableItemBackgroundBorderless"
-        />
+        android:background="?attr/selectableItemBackgroundBorderless" />
 
     <ImageButton
         android:id="@+id/flipCameraIB"
@@ -58,6 +36,18 @@
         android:src="@drawable/cameraflip"
         tools:ignore="ImageContrastCheck" />
 
+    <ImageButton
+        android:id="@+id/BarcodeScanIB"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/camerashutter"
+        android:scaleType="fitCenter"
+        android:src="@drawable/qr_code_img"
+        android:background="@drawable/ripple_effect" />
+
     <TextView
         android:id="@+id/barcodeResultTextView"
         android:layout_width="wrap_content"
@@ -71,7 +61,8 @@
         android:textColor="@android:color/white"
         android:textColorHint="#90A4AE"
         android:textIsSelectable="true"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        tools:ignore="RelativeOverlap" />
 
     <ImageButton
         android:id="@+id/copyBarcode"
@@ -86,5 +77,17 @@
         android:scaleType="centerCrop"
         android:src="@drawable/copy_button"
         tools:ignore="TouchTargetSizeCheck" />
+
+    <ImageButton
+        android:id="@+id/screenshotButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="35dp"
+        android:contentDescription="@string/screenshot"
+        android:src="@drawable/screenshot_img"
+        android:scaleType="fitCenter"
+        android:background="?attr/selectableItemBackgroundBorderless" />
 
 </RelativeLayout>

@@ -1,8 +1,6 @@
 package com.gmail.techsavvysanyam.detectify.textrecognition
 
-import android.content.DialogInterface
 import android.content.Intent
-import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.net.Uri
@@ -22,13 +20,11 @@ import androidx.camera.core.CameraSelector
 import androidx.camera.core.ImageAnalysis
 import androidx.camera.core.Preview
 import androidx.camera.lifecycle.ProcessCameraProvider
-import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
 import com.gmail.techsavvysanyam.detectify.R
-import com.gmail.techsavvysanyam.detectify.appSettingOpen
 import com.gmail.techsavvysanyam.detectify.databinding.ActivityTextRgBinding
-import com.gmail.techsavvysanyam.detectify.warningPermissionDialog
+import com.gmail.techsavvysanyam.detectify.util.PermissionUtility
 import com.google.mlkit.vision.common.InputImage
 import com.google.mlkit.vision.text.TextRecognition
 import com.google.mlkit.vision.text.latin.TextRecognizerOptions
@@ -91,7 +87,7 @@ class TextRgActivity : AppCompatActivity(), TextRgAnalyzer.TextRgResultCallback 
         enableEdgeToEdge()
         setContentView(mainBinding.root)
         setStatusBarColor(R.color.status_bar_blue)
-        if (checkMultiplePermission()) {
+        if (PermissionUtility.checkMultiplePermission(this, multiplePermissionNameList.toTypedArray(), multiplePermissionId)) {
             startCamera()
         }
         mainBinding.flipCameraIB.setOnClickListener {
@@ -143,57 +139,18 @@ class TextRgActivity : AppCompatActivity(), TextRgAnalyzer.TextRgResultCallback 
         window.statusBarColor = resources.getColor(colorResId, theme)
     }
 
-    private fun checkMultiplePermission(): Boolean {
-        val listPermissionNeeded = arrayListOf<String>()
-        for (permission in multiplePermissionNameList) {
-            if (ContextCompat.checkSelfPermission(
-                    this,
-                    permission
-                ) != PackageManager.PERMISSION_GRANTED
-            ) {
-                listPermissionNeeded.add(permission)
-            }
-        }
-        if (listPermissionNeeded.isNotEmpty()) {
-            ActivityCompat.requestPermissions(
-                this,
-                listPermissionNeeded.toTypedArray(),
-                multiplePermissionId
-            )
-            return false
-        }
-        return true
-    }
-
-    override fun onRequestPermissionsResult(
-        requestCode: Int,
-        permissions: Array<out String>,
-        grantResults: IntArray
-    ) {
+    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-        if (requestCode == multiplePermissionId) {
-            if (grantResults.isNotEmpty() && grantResults.all { it == PackageManager.PERMISSION_GRANTED }) {
-                startCamera()
-            } else {
-                val deniedPermissions = permissions.filterIndexed { index, _ ->
-                    grantResults[index] == PackageManager.PERMISSION_DENIED
-                }
-                val permanentlyDenied = deniedPermissions.any {
-                    !ActivityCompat.shouldShowRequestPermissionRationale(this, it)
-                }
-                if (permanentlyDenied) {
-                    appSettingOpen(this)
-                } else {
-                    warningPermissionDialog(this) { _: DialogInterface, which: Int ->
-                        if (which == DialogInterface.BUTTON_POSITIVE) {
-                            checkMultiplePermission()
-                        }
-                    }
-                }
-            }
+        PermissionUtility.handlePermissionResult(
+            this,
+            requestCode,
+            permissions,
+            grantResults,
+            multiplePermissionId
+        ) {
+            startCamera()
         }
     }
-
     private fun startCamera() {
         val cameraProviderFuture = ProcessCameraProvider.getInstance(this)
         cameraProviderFuture.addListener({
