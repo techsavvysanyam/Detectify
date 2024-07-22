@@ -44,4 +44,7 @@
     <string name="copyimg">copyImg</string>
     <string name="copy">Copy</string>
     <string name="screenshot">screenshot</string>
+    <string name="restart">restart</string>
+    <string name="share">share</string>
+    <string name="delete">delete</string>
 </resources>

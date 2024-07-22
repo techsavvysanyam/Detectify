@@ -12,40 +12,7 @@
         android:layout_height="match_parent"
         android:layout_centerInParent="true"/>
 
-
-
-    <View
-        android:id="@+id/spacerView"
-        android:layout_width="0dp"
-        android:layout_height="30dp" />
-
-    <ImageButton
-        android:id="@+id/flashToggleIB"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_alignParentEnd="true"
-        android:layout_margin="10dp"
-        android:layout_below="@id/spacerView"
-        android:layout_centerHorizontal="true"
-        android:contentDescription="@string/flashwork"
-        android:scaleType="centerCrop"
-        android:src="@drawable/flash_off"
-        android:background="?attr/selectableItemBackgroundBorderless"
-        />
-
-    <ImageButton
-        android:id="@+id/flipCameraIB"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_below="@id/flashToggleIB"
-        android:layout_alignParentEnd="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginEnd="10dp"
-        android:background="?attr/selectableItemBackgroundBorderless"
-        android:contentDescription="@string/cameraswitch"
-        android:scaleType="centerCrop"
-        android:src="@drawable/cameraflip"
-        tools:ignore="ImageContrastCheck" />
+    <include layout="@layout/utility_common_button" />
 
     <!-- TAKE PICTURE Button -->
     <LinearLayout
@@ -151,64 +118,3 @@
             android:textSize="18sp" />
     </LinearLayout>
 </RelativeLayout>
-
-<!--<Button-->
-<!--android:id="@+id/pickImageButton"-->
-<!--android:layout_width="wrap_content"-->
-<!--android:layout_height="wrap_content"-->
-<!--android:text="Pick Image"-->
-<!--android:background="@drawable/blue_box_background"-->
-<!--android:layout_alignParentBottom="true"-->
-<!--android:layout_marginBottom="44dp"-->
-<!--android:layout_toStartOf="@+id/TextScanIB" />-->
-
-<!--<TextView-->
-<!--android:id="@+id/textRgLine"-->
-<!--android:layout_width="wrap_content"-->
-<!--android:layout_height="wrap_content"-->
-<!--android:layout_above="@+id/copyTextR"-->
-<!--android:layout_centerHorizontal="true"-->
-<!--android:layout_marginTop="20dp"-->
-<!--android:layout_marginBottom="8dp"-->
-<!--android:background="@drawable/blue_box_background"-->
-<!--android:hint="@string/text_line_recognition_result"-->
-<!--android:textIsSelectable="true"-->
-<!--android:textColor="@android:color/white"-->
-<!--android:textColorHint="#90A4AE"-->
-<!--android:textSize="18sp" />-->
-
-<!--<Button-->
-<!--android:id="@+id/takePictureButton"-->
-<!--android:layout_width="wrap_content"-->
-<!--android:layout_height="wrap_content"-->
-<!--android:text="Take Picture"-->
-<!--android:background="@drawable/blue_box_background"-->
-<!--android:layout_alignParentBottom="true"-->
-<!--android:layout_marginBottom="44dp"-->
-<!--android:layout_toEndOf="@+id/TextScanIB"/>-->
-
-<!--<ImageButton-->
-<!--android:id="@+id/copyTextR"-->
-<!--android:layout_width="25dp"-->
-<!--android:layout_height="25dp"-->
-<!--android:layout_alignParentEnd="true"-->
-<!--android:layout_above="@id/TextScanIB"-->
-<!--android:background="?attr/selectableItemBackgroundBorderless"-->
-<!--android:contentDescription="@string/copybutton"-->
-<!--android:scaleType="centerCrop"-->
-<!--android:layout_margin="6dp"-->
-<!--android:src="@drawable/copy_button"-->
-<!--tools:ignore="TouchTargetSizeCheck" />-->
-
-<!--<ImageButton-->
-<!--android:id="@+id/TextScanIB"-->
-<!--android:layout_width="120dp"-->
-<!--android:layout_height="75dp"-->
-<!--android:layout_alignParentBottom="true"-->
-<!--android:layout_marginBottom="30dp"-->
-<!--android:layout_centerHorizontal="true"-->
-<!--android:contentDescription="@string/camerashutter"-->
-<!--android:scaleType="centerInside"-->
-<!--android:src="@drawable/text_scan"-->
-<!--android:background="?attr/selectableItemBackgroundBorderless"-->
-<!--    />-->

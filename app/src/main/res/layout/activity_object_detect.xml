@@ -25,39 +25,6 @@
         android:background="@drawable/ripple_effect"
         />
 
-    <View
-        android:id="@+id/spacerView"
-        android:layout_width="0dp"
-        android:layout_height="30dp" />
-
-    <ImageButton
-        android:id="@+id/flashToggleIB"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_alignParentEnd="true"
-        android:layout_margin="10dp"
-        android:layout_below="@id/spacerView"
-        android:layout_centerHorizontal="true"
-        android:contentDescription="@string/flashwork"
-        android:scaleType="centerCrop"
-        android:src="@drawable/flash_off"
-        android:background="?attr/selectableItemBackgroundBorderless"
-        />
-
-    <ImageButton
-        android:id="@+id/flipCameraIB"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_below="@id/flashToggleIB"
-        android:layout_alignParentEnd="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginEnd="10dp"
-        android:background="?attr/selectableItemBackgroundBorderless"
-        android:contentDescription="@string/cameraswitch"
-        android:scaleType="centerCrop"
-        android:src="@drawable/cameraflip"
-        tools:ignore="ImageContrastCheck" />
-
     <LinearLayout
         android:id="@+id/allObjectResults"
         android:layout_width="match_parent"
@@ -107,17 +74,7 @@
         android:src="@drawable/copy_button"
         tools:ignore="TouchTargetSizeCheck" />
 
-    <ImageButton
-        android:id="@+id/screenshotButton"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_margin="40dp"
-        android:contentDescription="@string/screenshot"
-        android:src="@drawable/screenshot_img"
-        android:scaleType="fitCenter"
-        android:background="?attr/selectableItemBackgroundBorderless" />
+    <include layout="@layout/utility_common_button" />
 </RelativeLayout>
 
 
