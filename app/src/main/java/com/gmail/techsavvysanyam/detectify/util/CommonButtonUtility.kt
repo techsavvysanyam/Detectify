@@ -2,11 +2,7 @@ package com.gmail.techsavvysanyam.detectify.util
 
 import android.app.Activity
 import android.view.Surface
-import android.view.SurfaceView
-import android.view.View
 import android.widget.ImageButton
-import android.widget.LinearLayout
-import android.widget.TextView
 import android.widget.Toast
 import androidx.camera.core.AspectRatio
 import androidx.camera.core.Camera
