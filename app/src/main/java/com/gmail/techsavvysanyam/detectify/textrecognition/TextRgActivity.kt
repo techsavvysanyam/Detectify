@@ -74,7 +74,6 @@ class TextRgActivity : AppCompatActivity(), TextRgAnalyzer.TextRgResultCallback 
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(mainBinding.root)
-        setStatusBarColor(R.color.status_bar_blue)
         if (PermissionUtility.checkMultiplePermission(this, multiplePermissionNameList.toTypedArray(), multiplePermissionId)) {
             initializeButtonUtility()
         }
@@ -91,6 +90,7 @@ class TextRgActivity : AppCompatActivity(), TextRgAnalyzer.TextRgResultCallback 
         }
         mainBinding.root.findViewById<View>(R.id.screenshotButton).visibility = View.GONE
         mainBinding.root.findViewById<View>(R.id.restartButton).visibility = View.GONE
+        mainBinding.root.findViewById<View>(R.id.bottomOverlay).visibility = View.GONE
     }
     private fun takePicture() {
         val imageFile = createImageFile()
@@ -112,10 +112,6 @@ class TextRgActivity : AppCompatActivity(), TextRgAnalyzer.TextRgResultCallback 
             ".jpg",
             storageDir
         )
-    }
-
-    private fun setStatusBarColor(colorResId: Int) {
-        window.statusBarColor = resources.getColor(colorResId, theme)
     }
 
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {

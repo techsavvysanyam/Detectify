@@ -34,12 +34,10 @@ class BarcodeActivity : AppCompatActivity(), BarcodeAnalyzer.BarcodeResultCallba
             android.Manifest.permission.WRITE_EXTERNAL_STORAGE
         )
     }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(mainBinding.root)
-        setStatusBarColor(R.color.status_bar_blue)
 
         if (PermissionUtility.checkMultiplePermission(this, multiplePermissionNameList.toTypedArray(), multiplePermissionId)) {
             initializeButtonUtility()
@@ -70,12 +68,6 @@ class BarcodeActivity : AppCompatActivity(), BarcodeAnalyzer.BarcodeResultCallba
             }
         }
     }
-
-    // Status bar color
-    private fun setStatusBarColor(colorResId: Int) {
-        window.statusBarColor = resources.getColor(colorResId, theme)
-    }
-
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         PermissionUtility.handlePermissionResult(

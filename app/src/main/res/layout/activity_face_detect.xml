@@ -12,6 +12,8 @@
         android:layout_height="match_parent"
         android:layout_centerInParent="true" />
 
+    <include layout="@layout/utility_common_button" />
+
     <ImageButton
         android:id="@+id/FaceScanIB"
         android:layout_width="70dp"
@@ -30,7 +32,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_margin="10dp"
-        android:layout_above="@+id/FaceScanIB">
+        android:layout_above="@+id/bottomOverlay">
 
         <LinearLayout
             android:id="@+id/copyFaceResult"
@@ -111,6 +113,4 @@
             android:textIsSelectable="true"
             android:textSize="18sp" />
     </LinearLayout>
-
-    <include layout="@layout/utility_common_button" />
 </RelativeLayout>

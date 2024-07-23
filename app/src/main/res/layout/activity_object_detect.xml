@@ -12,6 +12,8 @@
         android:layout_height="match_parent"
         android:layout_centerInParent="true"/>
 
+    <include layout="@layout/utility_common_button" />
+
     <ImageButton
         android:id="@+id/ObjectScanIB"
         android:layout_width="70dp"
@@ -30,7 +32,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_above="@+id/copyObjectR">
+        android:layout_margin="10dp"
+        android:layout_above="@+id/bottomOverlay">
     <TextView
         android:id="@+id/objectResultTextView"
         android:layout_width="wrap_content"
@@ -66,15 +69,14 @@
         android:id="@+id/copyObjectR"
         android:layout_width="28dp"
         android:layout_height="28dp"
-        android:layout_margin="6dp"
+        android:layout_margin="14dp"
         android:background="?attr/selectableItemBackgroundBorderless"
         android:contentDescription="@string/copybutton"
-        android:layout_above="@id/ObjectScanIB"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@id/bottomOverlay"
         android:scaleType="centerCrop"
         android:src="@drawable/copy_button"
         tools:ignore="TouchTargetSizeCheck" />
-
-    <include layout="@layout/utility_common_button" />
 </RelativeLayout>
 
 

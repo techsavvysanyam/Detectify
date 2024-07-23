@@ -1,7 +1,9 @@
 package com.gmail.techsavvysanyam.detectify.util
 
+import android.animation.ObjectAnimator
 import android.app.Activity
 import android.view.Surface
+import android.view.animation.AccelerateDecelerateInterpolator
 import android.widget.ImageButton
 import android.widget.Toast
 import androidx.camera.core.AspectRatio
@@ -104,10 +106,10 @@ class CommonButtonUtility(
         if (camera.cameraInfo.hasFlashUnit()) {
             if (camera.cameraInfo.torchState.value == 0) {
                 camera.cameraControl.enableTorch(true)
-                flashButton.setImageResource(R.drawable.flash_off)
+                flashButton.setImageResource(R.drawable.flash_on)
             } else {
                 camera.cameraControl.enableTorch(false)
-                flashButton.setImageResource(R.drawable.flash_on)
+                flashButton.setImageResource(R.drawable.flash_off)
             }
         } else {
             Toast.makeText(activity, "Flash not supported", Toast.LENGTH_SHORT).show()
@@ -127,6 +129,10 @@ class CommonButtonUtility(
     }
     private fun setFlipCameraButton() {
         flipCameraButton.setOnClickListener {
+            val rotationAnimator = ObjectAnimator.ofFloat(flipCameraButton, "rotation", 0f, 360f)
+            rotationAnimator.duration = 800
+            rotationAnimator.interpolator = AccelerateDecelerateInterpolator()
+            rotationAnimator.start()
             lensFacing = if (lensFacing == CameraSelector.LENS_FACING_FRONT) {
                 CameraSelector.LENS_FACING_BACK
             } else {

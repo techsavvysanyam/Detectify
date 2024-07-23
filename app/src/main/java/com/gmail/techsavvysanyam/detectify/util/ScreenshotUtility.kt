@@ -209,7 +209,7 @@ object ScreenshotUtility {
         toast.view = layout
 
         // Convert 200dp to pixels
-        val marginBottomInDp = 260
+        val marginBottomInDp = 280
         val marginBottomInPx = TypedValue.applyDimension(
             TypedValue.COMPLEX_UNIT_DIP,
             marginBottomInDp.toFloat(),

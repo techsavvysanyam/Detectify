@@ -39,7 +39,6 @@ class ObjectDetectActivity : AppCompatActivity(), ObjectAnalyzer.ObjectResultCal
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(mainBinding.root)
-        setStatusBarColor(R.color.status_bar_blue)
         if (PermissionUtility.checkMultiplePermission(this, multiplePermissionNameList.toTypedArray(), multiplePermissionId)) {
             initializeButtonUtility()
         }
@@ -72,12 +71,6 @@ class ObjectDetectActivity : AppCompatActivity(), ObjectAnalyzer.ObjectResultCal
         }
 
     }
-
-    // status bar color
-    private fun setStatusBarColor(colorResId: Int) {
-        window.statusBarColor = resources.getColor(colorResId, theme)
-    }
-
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         PermissionUtility.handlePermissionResult(

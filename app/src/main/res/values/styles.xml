@@ -10,6 +10,7 @@
         <item name="android:windowBackground">@color/colorBackground</item>
         <item name="android:textColorPrimary">@color/colorTextPrimary</item>
         <item name="buttonStyle">@style/MyButtonStyle</item>
+
     </style>
 
     <!-- Dark Theme -->
