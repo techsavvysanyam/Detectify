@@ -194,7 +194,7 @@ object ScreenshotUtility {
         }
     }
     @SuppressLint("InflateParams")
-    private fun showCustomToast(context: Context, message: String) {
+    internal fun showCustomToast(context: Context, message: String) {
         // Inflate the custom Toast layout
         val inflater = LayoutInflater.from(context)
         val layout = inflater.inflate(R.layout.custom_toast, null)

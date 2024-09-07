@@ -5,7 +5,8 @@
     <uses-feature android:name="android.hardware.camera.any" />
 
     <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
         android:maxSdkVersion="28" />
 
     <application
@@ -17,6 +18,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Detectify"
         tools:targetApi="31">
+        <activity
+            android:name=".imagelabeler.ImageLabelerActivity"
+            android:exported="false" />
+
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="${applicationId}.provider"
@@ -26,6 +31,7 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths" />
         </provider>
+
         <activity
             android:name=".objectdetection.ObjectDetectActivity"
             android:exported="false" />
@@ -38,7 +44,6 @@
         <activity
             android:name=".barcode.BarcodeActivity"
             android:exported="false" />
-        <activity android:name=".CameraActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="false" />
@@ -52,5 +57,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".textrecognition.RecognizedTextActivity" />
+        <activity android:name=".imagelabeler.AnalyzedImageActivity" />
     </application>
+
 </manifest>

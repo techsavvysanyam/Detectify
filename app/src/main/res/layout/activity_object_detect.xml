@@ -32,14 +32,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_margin="10dp"
-        android:layout_above="@+id/bottomOverlay">
+        android:layout_marginBottom="30dp"
+        android:layout_marginStart="10dp"
+        android:layout_above="@+id/ObjectScanIB">
     <TextView
         android:id="@+id/objectResultTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/object_result"
         android:textSize="18sp"
+        android:textIsSelectable="true"
         android:layout_margin="4dp"
         android:textColor="@android:color/white"
         android:background="@drawable/blue_box_background" />
@@ -49,6 +51,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/confidence"
+        android:textIsSelectable="true"
         android:textColor="@color/white"
         android:textSize="18sp"
         android:layout_margin="4dp"

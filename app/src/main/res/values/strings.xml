@@ -47,4 +47,12 @@
     <string name="restart">restart</string>
     <string name="share">share</string>
     <string name="delete">delete</string>
+    <string name="langtext">langText</string>
+    <string name="image_labeler">Image Labeler</string>
+    <string name="label_header">Label</string>
+    <string name="confidence_header">Accuracy</string>
+    <string name="text_copied">Whole text copied to clipboard</string>
+    <string name="no_text_to_copy">No text to copy</string>
+    <string name="_1x">1x</string>
+
 </resources>

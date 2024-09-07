@@ -1,4 +1,4 @@
-package com.gmail.techsavvysanyam.detectify.textrecognition
+package com.gmail.techsavvysanyam.detectify.imagelabeler
 
 import android.content.Intent
 import android.graphics.Bitmap
@@ -20,23 +20,23 @@ import androidx.camera.core.ImageCapture
 import androidx.camera.core.ImageCaptureException
 import androidx.core.content.ContextCompat
 import com.gmail.techsavvysanyam.detectify.R
-import com.gmail.techsavvysanyam.detectify.databinding.ActivityTextRgBinding
+import com.gmail.techsavvysanyam.detectify.databinding.ActivityImageLabelerBinding
 import com.gmail.techsavvysanyam.detectify.util.CommonButtonUtility
 import com.gmail.techsavvysanyam.detectify.util.ImageManager
 import com.gmail.techsavvysanyam.detectify.util.PermissionUtility
 import com.gmail.techsavvysanyam.detectify.util.ScreenshotUtility
 import com.google.mlkit.vision.common.InputImage
-import com.google.mlkit.vision.text.TextRecognition
-import com.google.mlkit.vision.text.latin.TextRecognizerOptions
+import com.google.mlkit.vision.label.ImageLabeling
+import com.google.mlkit.vision.label.defaults.ImageLabelerOptions
 import java.io.File
 import java.io.InputStream
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
 
-class TextRgActivity : AppCompatActivity() {
-    private val mainBinding: ActivityTextRgBinding by lazy {
-        ActivityTextRgBinding.inflate(layoutInflater)
+class ImageLabelerActivity : AppCompatActivity() {
+    private val mainBinding: ActivityImageLabelerBinding by lazy {
+        ActivityImageLabelerBinding.inflate(layoutInflater)
     }
     private lateinit var buttonUtility: CommonButtonUtility
 
@@ -56,9 +56,10 @@ class TextRgActivity : AppCompatActivity() {
         uri?.let {
             val inputStream: InputStream? = contentResolver.openInputStream(uri)
             val bitmap = BitmapFactory.decodeStream(inputStream)
-            recognizeTextFromImage(bitmap)
+            analyzeLabelFromImage(bitmap)
         }
     }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -66,6 +67,7 @@ class TextRgActivity : AppCompatActivity() {
         if (PermissionUtility.checkMultiplePermission(this, multiplePermissionNameList.toTypedArray(), multiplePermissionId)) {
             initializeButtonUtility()
         }
+
         mainBinding.pickImageButton.setOnClickListener {
             pickImageFromGallery()
         }
@@ -75,10 +77,12 @@ class TextRgActivity : AppCompatActivity() {
         mainBinding.root.findViewById<View>(R.id.screenshotButton).visibility = View.GONE
         mainBinding.root.findViewById<View>(R.id.restartButton).visibility = View.GONE
     }
+
     private fun playClickAnimation() {
         val animation = AnimationUtils.loadAnimation(this, R.anim.shutter_animation)
-        mainBinding.previewText.startAnimation(animation)
+        mainBinding.previewImage.startAnimation(animation)
     }
+
     private fun playClickSound() {
         val mediaPlayer = MediaPlayer.create(this, R.raw.click_sound)
         mediaPlayer.start()
@@ -89,9 +93,10 @@ class TextRgActivity : AppCompatActivity() {
 
     private fun takePicture() {
         val imageCapture = buttonUtility.imageCapture ?: return
-        // play raw and anim
+        // Play click sound and animation
         playClickSound()
         playClickAnimation()
+
         val photoFile = createImageFile()
         val outputOptions = ImageCapture.OutputFileOptions.Builder(photoFile).build()
 
@@ -102,12 +107,12 @@ class TextRgActivity : AppCompatActivity() {
                 override fun onImageSaved(outputFileResults: ImageCapture.OutputFileResults) {
                     Uri.fromFile(photoFile)
                     val bitmap = BitmapFactory.decodeFile(photoFile.absolutePath)
-                    recognizeTextFromImage(bitmap)
-                    ImageManager.saveImage(this@TextRgActivity, photoFile.absolutePath)
+                    analyzeLabelFromImage(bitmap)
+                    ImageManager.saveImage(this@ImageLabelerActivity, photoFile.absolutePath)
                 }
 
                 override fun onError(exception: ImageCaptureException) {
-                    Toast.makeText(this@TextRgActivity, "Failed to capture image", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@ImageLabelerActivity, "Failed to capture image", Toast.LENGTH_SHORT).show()
                 }
             }
         )
@@ -139,7 +144,7 @@ class TextRgActivity : AppCompatActivity() {
     private fun initializeButtonUtility() {
         buttonUtility = CommonButtonUtility(
             activity = this,
-            previewView = mainBinding.previewText,
+            previewView = mainBinding.previewImage,
             restartButton = null,
             flashButton = mainBinding.root.findViewById(R.id.flashToggleIB),
             flipCameraButton = mainBinding.root.findViewById(R.id.flipCameraIB),
@@ -152,28 +157,34 @@ class TextRgActivity : AppCompatActivity() {
         )
         buttonUtility.startCamera()
     }
+
     private fun pickImageFromGallery() {
         pickImageLauncher.launch("image/*")
     }
 
-    private fun recognizeTextFromImage(bitmap: Bitmap) {
+    private fun analyzeLabelFromImage(bitmap: Bitmap) {
         val image = InputImage.fromBitmap(bitmap, 0)
-        val recognizer = TextRecognition.getClient(TextRecognizerOptions.DEFAULT_OPTIONS)
+        val options = ImageLabelerOptions.Builder()
+            .setConfidenceThreshold(0.7f)
+            .build()
+        val labeler = ImageLabeling.getClient(options)
 
-        recognizer.process(image)
-            .addOnSuccessListener { visionText ->
-                if (visionText.textBlocks.isEmpty()) {
-                    ScreenshotUtility.showCustomToast(this, "No Text detected in captured image")
+        labeler.process(image)
+            .addOnSuccessListener { labels ->
+                if (labels.isEmpty()) {
+                    ScreenshotUtility.showCustomToast(this, "No labels detected in captured image")
                     return@addOnSuccessListener
                 }
-                val recognizedText = visionText.textBlocks.joinToString("\n") { it.text }
-                // Pass recognized text to a new activity
-                val intent = Intent(this, RecognizedTextActivity::class.java)
-                intent.putExtra("recognizedText", recognizedText)
+                // Collect labels and their confidence levels
+                val analyzedImage = labels.joinToString("\n") { "${it.text} - ${it.confidence}" }
+                // Pass the labels to AnalyzedImageActivity
+                val intent = Intent(this, AnalyzedImageActivity::class.java).apply {
+                    putExtra("analyzedImage", analyzedImage)
+                }
                 startActivity(intent)
             }
-            .addOnFailureListener {
-                Toast.makeText(this, "Failed to recognize text from image", Toast.LENGTH_SHORT).show()
+            .addOnFailureListener { _ ->
+                Toast.makeText(this, "Failed to label image", Toast.LENGTH_SHORT).show()
             }
     }
 }

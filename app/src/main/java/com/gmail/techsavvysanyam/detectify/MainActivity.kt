@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatDelegate
 import com.gmail.techsavvysanyam.detectify.barcode.BarcodeActivity
 import com.gmail.techsavvysanyam.detectify.databinding.ActivityMainBinding
 import com.gmail.techsavvysanyam.detectify.facedetect.FaceDetectActivity
+import com.gmail.techsavvysanyam.detectify.imagelabeler.ImageLabelerActivity
 import com.gmail.techsavvysanyam.detectify.objectdetection.ObjectDetectActivity
 import com.gmail.techsavvysanyam.detectify.textrecognition.TextRgActivity
 
@@ -25,9 +26,6 @@ class MainActivity : AppCompatActivity() {
         mainBinding.themeSwitcher.setOnClickListener {
             switchTheme()
         }
-        mainBinding.openCamera.setOnClickListener {
-            startActivity(Intent(this, CameraActivity::class.java))
-        }
         mainBinding.openBarcode.setOnClickListener {
             startActivity(Intent(this, BarcodeActivity::class.java))
         }
@@ -39,6 +37,9 @@ class MainActivity : AppCompatActivity() {
         }
         mainBinding.openObjectDetector.setOnClickListener{
             startActivity(Intent(this, ObjectDetectActivity::class.java))
+        }
+        mainBinding.openImageLabeler.setOnClickListener{
+            startActivity(Intent(this, ImageLabelerActivity::class.java))
         }
     }
 

@@ -8,7 +8,6 @@ import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
-import com.gmail.techsavvysanyam.detectify.R
 import com.gmail.techsavvysanyam.detectify.databinding.ActivityRecognizedTextBinding
 
 class RecognizedTextActivity : AppCompatActivity() {
@@ -20,7 +19,6 @@ class RecognizedTextActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(recognizedTextBinding.root)
-        setStatusBarColor(R.color.status_bar_blue)
 
         val recognizedText = intent.getStringExtra("recognizedText")
         recognizedTextBinding.recognizedTextView.text = recognizedText
@@ -41,13 +39,6 @@ class RecognizedTextActivity : AppCompatActivity() {
             }
         }
     }
-
-    // status bar color
-    private fun setStatusBarColor(colorResId: Int) {
-        window.statusBarColor = resources.getColor(colorResId, theme)
-    }
-
-    // theme switcher
     private fun switchTheme() {
         val currentMode = AppCompatDelegate.getDefaultNightMode()
         val newMode = if (currentMode == AppCompatDelegate.MODE_NIGHT_YES) {

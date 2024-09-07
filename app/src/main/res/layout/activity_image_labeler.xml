@@ -4,10 +4,10 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".textrecognition.TextRgActivity">
+    tools:context=".imagelabeler.ImageLabelerActivity">
 
     <androidx.camera.view.PreviewView
-        android:id="@+id/previewText"
+        android:id="@+id/previewImage"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_centerInParent="true"/>
@@ -24,7 +24,7 @@
         android:scaleType="fitCenter"
         android:layout_centerHorizontal="true"
         android:background="@drawable/ripple_effect"
-        android:src="@drawable/text_rec_img" />
+        android:src="@drawable/image_label_img"/>
 
     <!-- PICK IMAGE Button -->
     <ImageButton

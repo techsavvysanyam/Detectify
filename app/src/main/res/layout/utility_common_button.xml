@@ -73,4 +73,49 @@
         android:scaleType="fitCenter"
         android:background="?attr/selectableItemBackgroundBorderless" />
 
+    <!-- Toggle Button for Aspect Ratio -->
+    <ImageButton
+        android:id="@+id/frameToggleButton"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_below="@id/spacerView"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"
+        android:scaleType="centerCrop"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_4_3" />
+
+    <LinearLayout
+        android:id="@+id/zoomLayout"
+        android:layout_width="40dp"
+        android:layout_height="69dp"
+        android:orientation="vertical"
+        android:padding="4dp"
+        android:layout_marginBottom="10dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@+id/overlay_layout"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/overlay_background">
+
+        <TextView
+            android:id="@+id/zoom_1x"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:background="@drawable/zoom_toggle_selected_background"
+            android:text="1x"
+
+            android:textColor="@color/magicBlue"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/zoom_2x"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:text="2"
+            android:textColor="@color/colorTextPrimary"
+            android:textSize="14sp" />
+    </LinearLayout>
 </merge>

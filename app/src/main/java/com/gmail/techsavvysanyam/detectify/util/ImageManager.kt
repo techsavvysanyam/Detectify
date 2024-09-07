@@ -1,4 +1,4 @@
-package com.gmail.techsavvysanyam.detectify.textrecognition
+package com.gmail.techsavvysanyam.detectify.util
 
 import android.content.Context
 import android.content.SharedPreferences

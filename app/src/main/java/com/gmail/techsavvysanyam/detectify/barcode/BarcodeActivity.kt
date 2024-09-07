@@ -46,6 +46,10 @@ class BarcodeActivity : AppCompatActivity(), BarcodeAnalyzer.BarcodeResultCallba
         mainBinding.BarcodeScanIB.setOnClickListener {
             scanBarcode()
         }
+//        mainBinding.toggleButton.setOnClickListener {
+//            areOverlaysVisible = !areOverlaysVisible
+//            toggleOverlays()
+//        }
         mainBinding.root.findViewById<View>(R.id.screenshotButton).setOnClickListener {
             ScreenshotUtility.captureScreenshot(
                 this,
@@ -89,7 +93,11 @@ class BarcodeActivity : AppCompatActivity(), BarcodeAnalyzer.BarcodeResultCallba
             flashButton = mainBinding.root.findViewById(R.id.flashToggleIB),
             flipCameraButton = mainBinding.root.findViewById(R.id.flipCameraIB),
             camera = null,
-            lensFacing = CameraSelector.LENS_FACING_BACK
+            lensFacing = CameraSelector.LENS_FACING_BACK,
+            toggleButton = mainBinding.root.findViewById(R.id.frameToggleButton),
+            topOverlay = mainBinding.root.findViewById(R.id.topOverlay),
+            bottomOverlay = mainBinding.root.findViewById(R.id.bottomOverlay),
+            zoomLayout = mainBinding.root.findViewById(R.id.zoomLayout)
         )
     }
 

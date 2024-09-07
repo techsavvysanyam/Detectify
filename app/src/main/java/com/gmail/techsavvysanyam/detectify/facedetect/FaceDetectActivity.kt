@@ -97,7 +97,11 @@ class FaceDetectActivity : AppCompatActivity(), FaceDetectAnalyzer.FaceResultCal
             flashButton = mainBinding.root.findViewById(R.id.flashToggleIB),
             camera = null,
             flipCameraButton = mainBinding.root.findViewById(R.id.flipCameraIB),
-            lensFacing = CameraSelector.LENS_FACING_FRONT
+            lensFacing = CameraSelector.LENS_FACING_FRONT,
+            toggleButton = mainBinding.root.findViewById(R.id.frameToggleButton),
+            topOverlay = mainBinding.root.findViewById(R.id.topOverlay),
+            bottomOverlay = mainBinding.root.findViewById(R.id.bottomOverlay),
+            zoomLayout = mainBinding.root.findViewById(R.id.zoomLayout)
         )
     }
     private fun scanFace() {

@@ -53,7 +53,6 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="16dp">
-
             <!-- Main Logo -->
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -69,43 +68,11 @@
                     android:src="@drawable/main_image"
                     tools:ignore="ImageContrastCheck" />
             </RelativeLayout>
-
             <!-- Buttons -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
-
-                <!-- Camera Button -->
-                <LinearLayout
-                    android:id="@+id/openCamera"
-                    android:layout_width="match_parent"
-                    android:layout_height="65dp"
-                    android:layout_marginBottom="16dp"
-                    android:background="@drawable/button_background"
-                    android:contentDescription="@string/open_camera"
-                    android:gravity="center_vertical"
-                    android:importantForAccessibility="no"
-                    android:orientation="horizontal"
-                    android:padding="10dp">
-
-                    <ImageView
-                        android:layout_width="28dp"
-                        android:layout_height="28dp"
-                        android:layout_marginEnd="15dp"
-                        android:layout_marginStart="10dp"
-                        android:contentDescription="@string/open_camera"
-                        android:src="@drawable/camera_splash_img"
-                        tools:ignore="ImageContrastCheck" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/camera"
-                        android:textColor="@color/colorTextPrimary"
-                        android:textSize="18sp" />
-                </LinearLayout>
-
                 <!-- Barcode Scanner Button -->
                 <LinearLayout
                     android:id="@+id/openBarcode"
@@ -132,7 +99,6 @@
                         android:textColor="@color/colorTextPrimary"
                         android:textSize="18sp" />
                 </LinearLayout>
-
                 <!-- Face Analyzer Button -->
                 <LinearLayout
                     android:id="@+id/openFaceDetection"
@@ -160,7 +126,6 @@
                         android:textColor="@color/colorTextPrimary"
                         android:textSize="18sp" />
                 </LinearLayout>
-
                 <!-- Object Detection Button -->
                 <LinearLayout
                     android:id="@+id/openObjectDetector"
@@ -189,8 +154,35 @@
                         android:textColor="@color/colorTextPrimary"
                         android:textSize="18sp" />
                 </LinearLayout>
-
                 <!-- Text Recognition Button -->
+                <LinearLayout
+                    android:id="@+id/openImageLabeler"
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/button_background"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    tools:ignore="VisualLintBounds">
+
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginStart="10dp"
+                        android:contentDescription="@string/langtext"
+                        android:src="@drawable/image_label_img"
+                        tools:ignore="ImageContrastCheck" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/image_labeler"
+                        android:textColor="@color/colorTextPrimary"
+                        android:textSize="18sp" />
+                </LinearLayout>
+                <!-- Image labeler Button -->
                 <LinearLayout
                     android:id="@+id/openTextRecognizer"
                     android:layout_width="match_parent"

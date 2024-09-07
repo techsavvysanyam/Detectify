@@ -31,8 +31,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_margin="10dp"
-        android:layout_above="@+id/bottomOverlay">
+        android:layout_marginBottom="25dp"
+        android:layout_marginStart="10dp"
+        android:layout_above="@+id/FaceScanIB">
 
         <LinearLayout
             android:id="@+id/copyFaceResult"

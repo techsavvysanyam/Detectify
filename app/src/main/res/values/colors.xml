@@ -2,9 +2,10 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="status_bar_blue">@color/colorBackground</color>
-    <color name="blue" />
+    <color name="yellow">#FFF200</color>
     <color name="light_blue">#ADD8E6</color>
+    <color name="magicBlue">#3D8BFF</color>"
+    <color name="magicAuto">#16000000</color>
 
     <color name="colorPrimary">#5B03A9F4</color>
     <color name="colorPrimaryDark">#5B03A9F4</color>

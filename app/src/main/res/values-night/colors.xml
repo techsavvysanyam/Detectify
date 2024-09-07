@@ -9,4 +9,6 @@
     <color name="colorButtonBackground">#5B03A9F4</color>
     <color name="colorButtonText">#000000</color>
     <color name="splash_background">#000000</color>
+    <color name="magicBlue">#2859c5</color>
+    <color name="magicAuto">#19FFFFFF</color>
 </resources>

@@ -3,12 +3,14 @@ agp = "8.4.2"
 barcodeScanning = "17.2.0"
 cameraCore = "1.3.4"
 faceDetection = "16.1.6"
+imageLabeling = "17.0.8"
 kotlin = "1.9.0"
 coreKtx = "1.13.1"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
 appcompat = "1.7.0"
+languageId = "17.0.5"
 material = "1.12.0"
 activity = "1.9.0"
 textRecognition = "16.0.0"
@@ -22,10 +24,12 @@ androidx-camera-view = { module = "androidx.camera:camera-view", version.ref = "
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 barcode-scanning = { module = "com.google.mlkit:barcode-scanning", version.ref = "barcodeScanning" }
 face-detection = { module = "com.google.mlkit:face-detection", version.ref = "faceDetection" }
+image-labeling = { module = "com.google.mlkit:image-labeling", version.ref = "imageLabeling" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+language-id = { module = "com.google.mlkit:language-id", version.ref = "languageId" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 text-recognition = { module = "com.google.mlkit:text-recognition", version.ref = "textRecognition" }
