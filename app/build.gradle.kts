@@ -55,11 +55,10 @@ dependencies {
     implementation (libs.barcode.scanning)
     implementation (libs.face.detection)
     implementation (libs.text.recognition)
-    implementation (libs.language.id)
     implementation (libs.image.labeling)
     //noinspection UseTomlInstead
     implementation ("com.google.mlkit:object-detection-custom:17.0.2")
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
+//    testImplementation(libs.junit)
+//    androidTestImplementation(libs.androidx.junit)
+//    androidTestImplementation(libs.androidx.espresso.core)
 }

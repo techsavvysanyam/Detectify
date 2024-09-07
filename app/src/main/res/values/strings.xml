@@ -54,5 +54,11 @@
     <string name="text_copied">Whole text copied to clipboard</string>
     <string name="no_text_to_copy">No text to copy</string>
     <string name="_1x">1x</string>
+    <string name="text_scan">Text scan</string>
+    <string name="image_scan">image_scan</string>
+    <string name="analyzed_image_labels">Analyzed Image Labels</string>
+    <string name="aspect_ratio">aspect ratio</string>
+    <string name="_1x_">1x</string>
+    <string name="_2">2</string>
 
 </resources>

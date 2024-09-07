@@ -81,6 +81,7 @@
         android:layout_below="@id/spacerView"
         android:layout_centerHorizontal="true"
         android:layout_margin="20dp"
+        android:contentDescription="@string/aspect_ratio"
         android:scaleType="centerCrop"
         android:background="?attr/selectableItemBackgroundBorderless"
         android:src="@drawable/ic_4_3" />
@@ -104,7 +105,7 @@
             android:layout_height="30dp"
             android:gravity="center"
             android:background="@drawable/zoom_toggle_selected_background"
-            android:text="1x"
+            android:text="@string/_1x_"
 
             android:textColor="@color/magicBlue"
             android:textSize="14sp" />
@@ -114,7 +115,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:gravity="center"
-            android:text="2"
+            android:text="@string/_2"
             android:textColor="@color/colorTextPrimary"
             android:textSize="14sp" />
     </LinearLayout>
